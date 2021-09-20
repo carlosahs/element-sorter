@@ -11,11 +11,16 @@ class ChemicalElement
         std::string name { "Hydrogen" };
         std::string symbol { "H" };
     public:
+        ChemicalElement();
         ChemicalElement(std::string, std::string, int, float);
         int get_atomic_number();
         float get_atomic_mass();
         std::string get_name();
         std::string get_symbol();
+        bool operator<(ChemicalElement&);
+        bool operator>(ChemicalElement&);
+        bool operator==(ChemicalElement&);
+        bool operator!=(ChemicalElement&);
 };
 
 #endif
